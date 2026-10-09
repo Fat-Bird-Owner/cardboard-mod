@@ -3,6 +3,6 @@ health: 2500
 size: 3
 
 armor: 5
-requirements: [cardboard/500, compressed-cardbox/250]
+requirements: [cardboard/500, compressed-cardboard/250]
 itemCapacity: 750
 unitType: transpose
