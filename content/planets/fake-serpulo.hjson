@@ -10,7 +10,14 @@ orbitRadius: 5
 meshes: [
 {
 type: NoiseMesh
-color1: 596ab8ff
-color2: 596ab8ff
+color1: 596ab855
+color2: 596ab855
+seed: 19
+}
+{
+type: NoiseMesh
+color1: ff0000
+color2: 596ab855
+seed: 19
 }
 ]
