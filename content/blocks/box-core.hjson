@@ -1,8 +1,11 @@
 type: CoreBlock
+name: Box Core
 health: 2500
 size: 3
 
 armor: 5
 requirements: [cardboard/500, compressed-cardboard/250]
 itemCapacity: 750
+
 unitType: transpose
+category: effect
