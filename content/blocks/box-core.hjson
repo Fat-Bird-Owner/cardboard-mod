@@ -1,0 +1,7 @@
+type: CoreBlock
+health: 2500
+size: 3
+
+armor: 5
+requirements: []
+unitType: transpose
