@@ -1,16 +1,16 @@
 // file name very used in logic like template-block.
-name: "template"
+name: "cb"
 
-displayName: "Mod Template"
-repo: "Fat-Bird-Owner/Mindustry-mod-template-hjson"
+displayName: "Cardboard Mod"
+repo: "Fat-Bird-Owner/Fat-Bird-Owner/cardboard-mod"
 subtitle: ""
-author: ""
+author: "Fat Bird's Owner"
 
 description: ""
 
 iosCompatible: true
 version: "v1"
-minGameVersion: "154.3"
+minGameVersion: "159"
 dependencies: []
 hidden: false
 
