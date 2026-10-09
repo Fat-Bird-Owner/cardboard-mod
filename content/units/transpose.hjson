@@ -1,6 +1,7 @@
 type: flying
 health: 200
 targetable: false
+name: Transpose
 
 outlineRadius: 0
 buildSpeed: 1
@@ -9,3 +10,5 @@ speed: 2.5
 flying: true
 accel: 0.1
 drag: 0.03
+
+engineOffset: -8.0
