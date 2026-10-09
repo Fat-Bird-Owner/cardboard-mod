@@ -1,0 +1,16 @@
+type: flying
+health: 200
+targetable: false
+
+outlineRadius: 0
+buildSpeed: 1
+speed: 2.5
+
+flying: true
+weapons: [
+{
+type: BuildWeapon
+y: 2
+x: 6
+}
+]
