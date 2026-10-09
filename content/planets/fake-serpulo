@@ -1,0 +1,16 @@
+name: Serpulo
+sectorSize: 3
+
+parent: sun
+solarSystem: sun
+alwaysUnlocked: true
+
+radius: 1.15
+orbitRadius: 5
+meshes: [
+{
+type: NoiseMesh
+color1: 596ab8ff
+color2: 596ab8ff
+}
+]
