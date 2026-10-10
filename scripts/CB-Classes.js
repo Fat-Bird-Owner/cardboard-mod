@@ -1,6 +1,6 @@
 
 // Config core
-function ConfigCore(block, recipes){
+function configCore(block, recipes){
 let block = Vars.content.block(block);
 block.buildType = () => extend(CoreBlock.CoreBuild, block, {
 
@@ -70,5 +70,5 @@ table.row();
 });
 
 exports.classes = {
-configCore: ConfigCore
+configCore: configCore
 }
