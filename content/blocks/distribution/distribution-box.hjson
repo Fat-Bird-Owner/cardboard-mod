@@ -25,4 +25,16 @@ bulletLifetime: 40
 research: box-core
 researchCostMultiplier: 0.25
 
-fullOverride: "cb-distribution-box"
+fullOverride: "cb-distribution-box-base"
+bullet: {
+collides: false
+despawnEffect: none
+parts: [
+{
+type: ShapePart
+sides: 4
+rotation: 45
+color: FFD37F
+}
+]
+}
