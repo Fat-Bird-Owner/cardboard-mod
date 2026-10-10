@@ -1,6 +1,7 @@
 
-// Box Core crafting
-let block = Vars.content.block("cb-box-core");
+// Config core
+function ConfigCore(block, recipes){
+let block = Vars.content.block(block);
 block.buildType = () => extend(CoreBlock.CoreBuild, block, {
 
 draw(){
@@ -60,23 +61,12 @@ this.items.add(Vars.content.item(value.icon), 1)
 buildConfiguration(table){
 
 table.add(this.returnButton(
-[{
-icon: "cb-cardboard",
-item: "copper",
-amount: 5
-},
-{
-icon: "cb-compressed-cardboard",
-item: "cb-cardboard",
-amount: 2
-}, 
-{
-icon: "cb-cardboard-box",
-item: "cb-compressed-cardboard",
-amount: 6
+recipes
+))};
+
+export.classes = {
+configCore: ConfigCore
 }
-]
-))
 
 table.row();
 }
