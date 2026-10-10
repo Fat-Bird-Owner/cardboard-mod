@@ -3,9 +3,7 @@ name: Box Core
 health: 2500
 size: 3
 
-description: "
-The core structure of the cardboard faction
-"
+description: "The core structure of the cardboard faction"
 
 armor: 5
 requirements: [cardboard/500, compressed-cardboard/250]
@@ -20,5 +18,5 @@ alwaysUnlocked: true
 research: {
 name: Cardboard
 root: true
-parent: fake-serpulo
+parent: fake-erekir
 }
