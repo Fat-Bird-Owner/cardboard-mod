@@ -24,3 +24,5 @@ bulletSpeed: 3
 bulletLifetime: 40
 research: box-core
 researchCostMultiplier: 0.25
+
+fullOverride: "cb-distribution-box"
