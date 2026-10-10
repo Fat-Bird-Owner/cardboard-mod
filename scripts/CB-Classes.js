@@ -26,7 +26,7 @@ let output = Vars.content.item(items[i].icon)
 let index = i
 if (!item) return;
 
-if (!output.unlocked()){
+if (!Vars.state.isCampaign() || output.unlocked()){
 button.clicked(() => {
 this.configure(items[index])
 })
