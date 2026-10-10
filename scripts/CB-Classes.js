@@ -65,6 +65,10 @@ recipes
 ));
 
 table.row();
+},
+
+shouldHideConfigure(player){
+return false;
 }
 
 });
