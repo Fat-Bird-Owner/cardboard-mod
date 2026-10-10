@@ -13,4 +13,5 @@ drag: 0.03
 
 engineOffset: 8.0
 mineSpeed: 10
+mineTier: 2
 moveSound: loopThruster
