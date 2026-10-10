@@ -1,7 +1,6 @@
 
 // Config core
 function configCore(block, recipes){
-let block = Vars.content.block(block);
 block.buildType = () => extend(CoreBlock.CoreBuild, block, {
 
 draw(){
@@ -74,8 +73,8 @@ return false;
 });
 }
 
-function poundDrill(block, item){
-let block = Vars.content.block(block)
+function poundDrill(blockN, item){
+let block = Vars.content.block(blockN)
 block.tier = 2
 block.rotateSpeed = 5;
 
