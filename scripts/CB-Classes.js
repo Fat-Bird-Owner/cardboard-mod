@@ -129,7 +129,43 @@ this.block.size*8*this.mul()
 })
 }
 
+function distributionPylon(blockN){
+let block = Vars.content.block(blockN);
+block.buildType = () => extend(MassDriver.MassDriverBuild, block, {
+connections: new OrderedSet(),
+
+updateTile(){
+this.reloadCounter = 0;
+if (this.waitingShooters.size >= this.connections.size) this.connections = this.waitingShooters.copy();
+this.super$updateTile();
+},
+
+acceptItem(source, item){
+if (
+    this.items.total() <= this.block.itemCapacity || 
+    source instanceof MassDriver.MassDriverBuild
+){
+return true;
+}},
+
+draw(){
+Draw.rect(this.block.baseRegion, this.x, this.y);
+
+Draw.z(100)
+this.connections.each(shooter => {
+Draw.color(Pal.accent)
+Lines.stroke(2)
+Lines.line(this.x, this.y, shooter.x, shooter.y)
+})
+
+Draw.reset()
+}
+
+});
+}
+
 exports.classes = {
 configCore: configCore,
-poundDrill: poundDrill
+poundDrill: poundDrill,
+distributionPylon: distributionPylon
 }
