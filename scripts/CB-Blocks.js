@@ -8,7 +8,8 @@ Vars.content.block("cb-box-core"), [
 ])
 
 classLib.classes.poundDrill(
-
+"cb-cardboard-drill",
+"cb-cardboard"
 )
   
 });
