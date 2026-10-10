@@ -1,0 +1,19 @@
+type: MassDriver
+name: Distribution Box
+
+requirements: [cardboard/5, compressed/1]
+category: distribution
+range: 120
+
+rotateSpeed: 360
+translation:	0
+minDistribute: 1
+
+knockback: 0
+itemCapacity: 5
+reload: 10
+
+bulletSpeed: 3
+bulletLifetime: 40
+research: box-core
+researchCostMultiplier: 0.25
