@@ -74,6 +74,58 @@ return false;
 });
 }
 
+function poundDrill(block, item){
+let block = Vars.content.block(block)
+block.tier = 2
+block.rotateSpeed = 5;
+
+block.buildType = () => extend(Drill.DrillBuild, block, {
+
+updateTile(){
+
+this.progress = this.timeDrilled
+if (this.progress >= this.block.getDrillTime(this.dominantItem)){
+Fx.shockwave.at(this.x, this.y, this.block.size*4)
+this.timeDrilled = 0;
+}
+
+this.dominantItem = Vars.content.item(item);
+this.super$updateTile();
+},
+
+mul(){
+
+return 1 - Interp.sineOut.apply(
+0.2 * (this.progress / this.block.getDrillTime(this.dominantItem))
+);
+},
+
+draw(){
+
+Draw.z(30)
+
+Draw.color(Color.black, 0.3)
+Draw.rect(this.block.region, this.x-4, this.y-4)
+Draw.reset()
+
+Draw.z(31)
+Draw.rect(this.block.region, this.x, this.y)
+
+Draw.color(Color.white, (this.mul()/3)*2 + 0.33)
+Draw.rect(
+this.block.rotatorRegion,
+this.x,
+this.y, 
+this.block.size*8*this.mul(),
+this.block.size*8*this.mul()
+)
+
+}
+
+})
+}
+
 exports.classes = {
-configCore: configCore
+configCore: configCore,
+poundDrill: poundDrill
 }
