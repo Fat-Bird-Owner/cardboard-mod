@@ -68,6 +68,7 @@ table.row();
 }
 
 });
+}
 
 exports.classes = {
 configCore: configCore
