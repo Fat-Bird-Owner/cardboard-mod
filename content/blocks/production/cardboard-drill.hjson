@@ -9,3 +9,6 @@ requirements: [cardboard/25, compressed-cardboard/5]
 category: production
 research: box-core
 researchCostMultiplier: 0.05
+
+blockedItems: [sand]
+tier: 2
