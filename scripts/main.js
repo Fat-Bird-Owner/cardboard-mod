@@ -1,1 +1,2 @@
-require("CBBlocks");
+require("CB-Classes");
+require("CB-Blocks");
