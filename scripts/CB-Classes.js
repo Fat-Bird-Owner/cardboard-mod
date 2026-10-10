@@ -16,7 +16,7 @@ Draw.reset();
 this.super$draw();
 },
 
-returnButton(items){
+returnButton(items, amt){
 let dialog = new Table();
 
 for (let i = 0; i < items.length; i++){
@@ -28,8 +28,10 @@ if (!item) return;
 
 if (!Vars.state.isCampaign() || output.unlocked()){
 button.clicked(() => {
-this.configure(items[index])
-})
+if (isNaN(Number(amt.getText()))) return;
+for (let i = 0; i < Number(amt.getText()); i++){
+this.configure(items[index]);
+}})
 
 button.add(String(items[i].amount)).pad(5);
 button.add(new Image(item.uiIcon)).size(30);
@@ -51,7 +53,6 @@ return dialog;
 },
 
 configured(player, value){
-log(value);
 if (!this.items.has(Vars.content.item(value.item), value.amount)) return;
 this.items.remove(Vars.content.item(value.item), value.amount)
 this.items.add(Vars.content.item(value.icon), 1)
@@ -59,9 +60,12 @@ this.items.add(Vars.content.item(value.icon), 1)
 
 buildConfiguration(table){
 
+let textInput = new TextArea("1");
+table.add(textInput)
+    
 table.add(this.returnButton(
 recipes
-));
+, textInput));
 
 table.row();
 },
