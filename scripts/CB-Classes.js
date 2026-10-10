@@ -69,6 +69,6 @@ table.row();
 
 });
 
-export.classes = {
+exports.classes = {
 configCore: ConfigCore
 }
