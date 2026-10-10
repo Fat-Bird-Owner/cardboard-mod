@@ -136,7 +136,7 @@ connections: new OrderedSet(),
 
 updateTile(){
 this.reloadCounter = 0;
-if (this.waitingShooters.size >= this.connections.size) this.connections = this.waitingShooters.copy();
+if (this.waitingShooters.size > this.connections.size) this.connections = this.waitingShooters.copy();
 this.super$updateTile();
 },
 
@@ -153,6 +153,12 @@ Draw.rect(this.block.baseRegion, this.x, this.y);
 
 Draw.z(100)
 this.connections.each(shooter => {
+
+if (!shooter.isValid()){
+this.connections = new OrderedSet();
+return;
+}
+    
 Draw.color(Pal.accent)
 Lines.stroke(2)
 Lines.line(this.x, this.y, shooter.x, shooter.y)
