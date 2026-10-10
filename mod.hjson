@@ -3,12 +3,12 @@ name: "cb"
 
 displayName: "Cardboard Mod"
 repo: "Fat-Bird-Owner/Fat-Bird-Owner/cardboard-mod"
-subtitle: ""
+subtitle: "Box it up"
 author: "Fat Bird's Owner"
 
 description: ""
 
-iosCompatible: true
+iosCompatible: false
 version: "v1"
 minGameVersion: "159"
 dependencies: []
