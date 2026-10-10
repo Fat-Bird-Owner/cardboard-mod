@@ -1,2 +1,4 @@
 name: Compressed Cardboard
 color: F0B68FFF
+research: cardboard
+alwaysUnlocked: true
