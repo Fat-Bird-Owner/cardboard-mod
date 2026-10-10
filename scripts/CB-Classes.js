@@ -62,13 +62,13 @@ buildConfiguration(table){
 
 table.add(this.returnButton(
 recipes
-))};
-
-export.classes = {
-configCore: ConfigCore
-}
+));
 
 table.row();
 }
 
 });
+
+export.classes = {
+configCore: ConfigCore
+}
