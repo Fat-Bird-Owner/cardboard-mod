@@ -13,6 +13,8 @@ itemCapacity: 750
 
 unitType: transpose
 category: effect
+configurable: true
+squareSprite: true
 
 alwaysUnlocked: true
 research: {
