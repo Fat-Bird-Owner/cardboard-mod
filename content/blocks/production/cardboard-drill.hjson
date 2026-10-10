@@ -1,0 +1,11 @@
+type: Drill
+name: Cardboard Drill
+size: 2
+  
+drillTime: 720
+liquidBoostIntensity: 1
+requirements: [cardboard/25, compressed-cardboard/5]
+
+category: production
+research: box-core
+researchCostMultiplier: 0.05
