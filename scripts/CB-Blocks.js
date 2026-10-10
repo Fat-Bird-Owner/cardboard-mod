@@ -12,6 +12,6 @@ classLib.classes.poundDrill(
 "cb-cardboard"
 )
 
-classLib.classes.distributionPylon("cb-distrbution-box");
+classLib.classes.distributionPylon("cb-distribution-box");
   
 });
