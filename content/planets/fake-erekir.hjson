@@ -1,13 +1,13 @@
-name: Serpulo
-sectorSize: 3
+name: Erekir
+sectorSize: 2
 
-parent: sun
-solarSystem: sun
+parent: fake-erekir
+solarSystem: fake-erekir
 alwaysUnlocked: true
 
 radius: 1.15
 orbitRadius: 5
-meshes: [
+mesh: [
 {
 type: NoiseMesh
 color1: 596ab855
