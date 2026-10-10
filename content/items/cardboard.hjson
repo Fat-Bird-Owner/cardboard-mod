@@ -1,2 +1,4 @@
 name: Cardboard
 color: F0B68FFF
+research: box-core
+alwaysUnlocked: true
