@@ -6,12 +6,19 @@ category: distribution
 range: 120
 
 rotateSpeed: 360
-translation:	0
+translation: 0
 minDistribute: 1
 
 knockback: 0
 itemCapacity: 5
 reload: 10
+
+shake: 0
+shootEffect: none
+smokeEffect: none
+receiveEffect: none
+shootSound: none
+receiveSound: none
 
 bulletSpeed: 3
 bulletLifetime: 40
