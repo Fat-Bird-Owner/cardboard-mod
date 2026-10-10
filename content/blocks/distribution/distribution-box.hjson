@@ -1,7 +1,7 @@
 type: MassDriver
 name: Distribution Box
 
-requirements: [cardboard/5, compressed/1]
+requirements: [cardboard/5, compressed-cardboard/1]
 category: distribution
 range: 120
 
