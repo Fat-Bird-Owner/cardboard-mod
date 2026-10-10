@@ -61,11 +61,12 @@ this.items.add(Vars.content.item(value.icon), 1)
 buildConfiguration(table){
 
 let textInput = new TextArea("1");
-table.add(textInput)
+table.add(textInput).size(250, 50).pad(5)
+table.row();
     
 table.add(this.returnButton(
-recipes
-, textInput));
+recipes, textInput)
+);
 
 table.row();
 },
