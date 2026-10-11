@@ -149,6 +149,8 @@ return true;
 }},
 
 draw(){
+
+Draw.z(32)
 Draw.rect(this.block.baseRegion, this.x, this.y);
 
 Draw.z(100)
@@ -164,9 +166,14 @@ Lines.stroke(2)
 Lines.line(this.x, this.y, shooter.x, shooter.y)
 })
 
+Draw.z(112)
+Draw.rect(this.block.region, this.x, this.y)
+    
+Draw.color(Color.black);
+Draw.rect(Core.atlas.find("circle-shadow"), this.x, this.y, this.block.size*12, this.block.size*12);
 Draw.reset()
 }
-
+    
 });
 }
 
