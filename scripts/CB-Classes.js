@@ -166,11 +166,14 @@ Lines.stroke(2)
 Lines.line(this.x, this.y, shooter.x, shooter.y)
 })
 
-Draw.z(112)
-Draw.rect(this.block.region, this.x, this.y)
-    
+Draw.z(111)
 Draw.color(Color.black);
 Draw.rect(Core.atlas.find("circle-shadow"), this.x, this.y, this.block.size*12, this.block.size*12);
+    
+Draw.z(112)
+Draw.color(Color.white);
+Draw.rect(this.block.region, this.x, this.y)
+    
 Draw.reset()
 }
     
