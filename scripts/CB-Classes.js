@@ -157,7 +157,7 @@ return true;
 
 drawSelect(){
 this.drawConfigure();
-}
+},
     
 drawConfigure(){
 
