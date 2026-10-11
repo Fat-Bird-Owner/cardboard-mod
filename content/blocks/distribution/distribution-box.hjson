@@ -12,6 +12,7 @@ minDistribute: 1
 knockback: 0
 itemCapacity: 5
 reload: 10
+clipSize: 140
 
 shake: 0
 shootEffect: none
