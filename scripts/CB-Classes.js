@@ -132,11 +132,17 @@ this.block.size*8*this.mul()
 function distributionPylon(blockN){
 let block = Vars.content.block(blockN);
 block.buildType = () => extend(MassDriver.MassDriverBuild, block, {
-connections: new OrderedSet(),
+connections: new OrderedSet()
 
 updateTile(){
 this.reloadCounter = 0;
-if (this.waitingShooters.size >= this.connections.size) this.connections = this.waitingShooters.copy();
+if (this.waitingShooters.size >= this.connections.size) {
+this.waitingShooters.each(obj => {
+if (!this.connections.find(obj2 => obj2 == obj)) {
+this.connections.add(obj);
+}});
+    
+}
 this.super$updateTile();
 },
 
