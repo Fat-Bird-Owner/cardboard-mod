@@ -162,6 +162,24 @@ linkValid(){
         && other.team == this.team
         && this.within(other, this.block.range);
 },
+
+onConfigureBuildTapped(other){
+    if(other == null || other == this){
+        this.deselect();
+        return false;
+    }
+
+    if(
+        other.isValid() &&
+        other.team == this.team &&
+        this.within(other, this.block.range)
+    ){
+        this.configure(other.pos());
+        return false;
+    }
+
+    return true;
+},
     
 draw(){
 
