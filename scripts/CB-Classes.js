@@ -136,7 +136,7 @@ connections: new OrderedSet(),
 
 updateTile(){
 this.reloadCounter = 0;
-if (this.waitingShooters.size > this.connections.size) this.connections = this.waitingShooters.copy();
+if (this.waitingShooters.size >= this.connections.size) this.connections = this.waitingShooters.copy();
 this.super$updateTile();
 },
 
@@ -169,7 +169,7 @@ Lines.line(this.x, this.y, shooter.x, shooter.y)
 Draw.z(64)
 Draw.color(Color.black, 0.4);
 Draw.rect(Core.atlas.find("circle-shadow"), this.x, this.y, this.block.size*8, this.block.size*8);
-Draw.rect(Core.atlas.find(this.block.name + "-pylon"), this.x-1.75, this.y-1.75);
+Draw.rect(Core.atlas.find(this.block.name + "-pylon"), this.x-1.5, this.y-1.5);
     
 Draw.z(112)
 Draw.color(Color.white);
