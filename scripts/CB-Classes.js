@@ -155,6 +155,15 @@ if (
 return true;
 }},
 
+linkValid(){
+    if (this.link != 1) return;
+    var other = Vars.world.build(this.link);
+    return other != null
+        && other.team == this.team
+        && this.within(other, this.block.range);
+        && other.block.itemCapacity > 0;
+}
+    
 draw(){
 
 Draw.z(32)
