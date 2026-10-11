@@ -31,6 +31,7 @@ collides: false
 despawnEffect: none
 width: 0
 height: 0
+hitSize: 1
 parts: [
 {
 type: ShapePart
