@@ -161,8 +161,8 @@ linkValid(){
     return other != null
         && other.team == this.team
         && this.within(other, this.block.range);
-        && other.block.itemCapacity > 0;
-}
+        && other.block.hasItems;
+},
     
 draw(){
 
