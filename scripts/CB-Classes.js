@@ -166,7 +166,7 @@ Drawf.circles(this.x, this.y, (this.block.size / 2 + 1) * Vars.tilesize + sin - 
 Drawf.dashCircle(this.x, this.y, this.block.range, Pal.accent);
 
 if(this.linkValid()){
-const target = world.build(link);
+const target = Vars.world.build(link);
 Drawf.circles(target.x, target.y, (target.block.size / 2 + 1) * Vars.tilesize + sin - 2, Pal.place);
 Drawf.arrow(this.x, this.y, target.x, target.y, size * Vars.tilesize + sin, 4 + sin);
 }
