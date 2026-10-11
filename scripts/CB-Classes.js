@@ -161,7 +161,6 @@ linkValid(){
     return other != null
         && other.team == this.team
         && this.within(other, this.block.range);
-        && other.block.hasItems;
 },
     
 draw(){
