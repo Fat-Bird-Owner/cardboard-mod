@@ -155,30 +155,21 @@ if (
 return true;
 }},
 
-linkValid(){
-    if (this.link == -1) return false;
-    var other = Vars.world.build(this.link);
-    return other != null
-        && other.team == this.team
-        && this.within(other, this.block.range);
-},
+drawConfigure(){
 
-onConfigureBuildTapped(other){
-    if(other == null || other == this){
-        this.deselect();
-        return false;
-    }
+let sin = Mathf.absin(Time.time, 6, 1);
+Drawf.circles(this.x, this.y, (this.block.size / 2 + 1) * Vars.tilesize + sin - 2, Pal.accent);
 
-    if(
-        other.isValid() &&
-        other.team == this.team &&
-        this.within(other, this.block.range)
-    ){
-        this.configure(other.pos());
-        return false;
-    }
+this.connections.each(shooter => {
 
-    return true;
+if (!shooter.isValid()){
+this.connections = new OrderedSet();
+return;
+}
+
+Drawf.dashLine(Pal.accent, this.x, this.y, shooter.x, shooter.y)
+});
+    
 },
     
 draw(){
