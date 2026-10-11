@@ -156,7 +156,7 @@ return true;
 }},
 
 linkValid(){
-    if (this.link != 1) return;
+    if (this.link == -1) return;
     var other = Vars.world.build(this.link);
     return other != null
         && other.team == this.team
